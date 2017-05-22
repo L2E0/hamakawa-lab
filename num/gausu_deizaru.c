@@ -7,10 +7,10 @@ int main(){
 	char z, zz;
 	eps = 1.0e-6;
 	while(1){
-		printf("–@’ì‚Ì”m‚Ì“ü—Í");
+		printf("æ–¹ç¨‹ã®æ•°mã®å…¥åŠ›");
 		scanf("%d",&m);
 		if((m <= 1) || (9 <= m))  continue;
-		printf("ŒW”s—ña‚Æ’è”€b‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n\n");
+		printf("ä¿‚æ•°è¡Œåˆ—aã¨å®šæ•°é …bã‚’å…¥åŠ›ã—ã¦ãã ã•ã„\n\n");
 		for(i=1; i<=m; i++){
 			for(j=1; j<=m; j++){
 				printf("a( %0d, %0d ) = " ,i,j);
@@ -20,7 +20,7 @@ int main(){
 			scanf("%f%c" ,&b[i],&zz);
 			printf("\n");
 		}
-		printf("\n³‚µ‚­“ü—Í‚µ‚Ü‚µ‚½B(y/n) ");
+		printf("\næ­£ã—ãå…¥åŠ›ã—ã¾ã—ãŸã€‚(y/n) ");
 		scanf("%c%c",&z,&zz);
 		if(z == 'y') break;
 	}
@@ -45,13 +45,13 @@ int main(){
 			x[i] = w;
 		}
 		if(anorm / xnorm <= 1.0e-6){
-			printf("\nû‘©‚µ‚Ü‚µ‚½\n");
+			printf("\nåæŸã—ã¾ã—ãŸ\n");
 			for(i=1; i<=m; i++){
 				printf("x%d = %10.6f\n",i,x[i]);
 			}
 			return 0;
 		}
 	}
-	printf("\nû‘©‚µ‚Ü‚¹‚ñ‚Å‚µ‚½B\n");
+	printf("\nåæŸã—ã¾ã›ã‚“ã§ã—ãŸã€‚\n");
 	return 0;
 }
