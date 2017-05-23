@@ -23,8 +23,7 @@ int main()
 
     static double a[N][N + 1], x[N], p, s;
 
-    for (i = 0; i < n; ++i)
-        x[i] = 0;
+    for (i = 0; i < n; ++i)  x[i] = 0;
 
     while (1)
     {
@@ -58,20 +57,18 @@ int main()
         for (j = i; j < n + 1; ++j)
             a[i][j] = a[i][j] / p;
 
-        for (j = i + 1; j < n; ++j)
+        for (j = 0; j < n; ++j)
         {
+            if(j == i) continue;
             p = a[j][i];
             for (k = i; k < n + 1; ++k)
                 a[j][k] = a[j][k] - a[i][k]  * p;
         }
     }
 
-    for (i = n - 1; i >= 0; --i)
+    for (i = 0; i < n; ++i)
     {
-        s = 0;
-        for (j = i + 1; j < n; ++j)
-            s += a[i][j] * x[j];
-        x[i] = a[i][n] - s;
+        x[i] = a[i][n];
     }
 
     for (i = 0; i < n; ++i)
