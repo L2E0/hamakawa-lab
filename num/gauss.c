@@ -28,13 +28,9 @@ int main()
 
     while (1)
     {
-        puts("何元連立ですかぁ？ n =");
+        puts("何元連立方程式ですか？ n =");
         scanf("%d", &n);
-        if (n <= 1 || n >= (N - 1))
-        {
-            puts("8元連立までしか解けないんですけどっ!");
-            continue;
-        }
+        if (n <= 1 || n >= (N - 1)) continue;
 
         for (i = 0; i < n; ++i)
             for (j = 0; j < n + 1; ++j)
@@ -55,7 +51,7 @@ int main()
         p = a[i][i];
         if (fabs(p) < 1.0e-6)
         {
-            puts("一意解持ちませんよぉ？");
+            puts("一意解を持たない");
             return -1;
         }
 
@@ -77,8 +73,6 @@ int main()
             s += a[i][j] * x[j];
         x[i] = a[i][n] - s;
     }
-
-    puts("計算終わりましたぁ");
 
     for (i = 0; i < n; ++i)
         printf("x%d = %10.6lf\n", i + 1, x[i]);
