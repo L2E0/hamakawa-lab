@@ -9,7 +9,7 @@ int main(void)
     int i;
     double x, y, h, k1, k2, k3, k4, k;
     char zz;
-    printf("ルンゲクッタ二次公式により\n\n");
+    printf("ルンゲクッタ４次公式により\n\n");
     printf("dy/dx = y - 12.0 * x + 3.0 を解きます");
     printf("\n\nエンターキーを押してください.\n");
     scanf("%c" ,&zz);
