@@ -1,2 +1,2 @@
 # hamakawa-lab
-This is repository for hamakawa-Lab
+This is a repository for hamakawa-Lab
